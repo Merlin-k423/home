@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+// 字体导入
+@font-face {
+  font-family: 'HarmonyOS_Sans_Regular';
+  font-display: swap;
+  src: url('../fonts/HarmonyOS_Sans_Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Playball';
+  font-display: swap;
+  src: url('../fonts/Playball.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'UnidreamLED';
+  font-display: swap;
+  src: url('../fonts/UnidreamLED.ttf') format('truetype');
+}
+
+// 全局样式
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'HarmonyOS_Sans_Regular', sans-serif;
+  background-color: #333;
+}
+
+span,
+p {
+  line-height: 1.5;
+  color: #fff;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+  &:hover {
+    color: rgb(57, 159, 255);
+    text-decoration: underline;
+  }
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 0;
+}
+
+.text-hidden {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.card {
+  background-color: #00000040;
+  border-radius: 8px;
+  backdrop-filter: blur(7px);
+  transform: scale(1);
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.01);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+// 弹窗样式
+.el-message {
+  --el-message-bg-color: #00000040 !important;
+  --el-message-text-color: #efefef !important;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 25px !important;
+  border-color: transparent !important;
+
+  .el-message__badge {
+    display: none;
+  }
+  .el-message__content {
+    white-space: nowrap;
+  }
+}
+
+// 进度条样式
+.el-progress-bar {
+  .el-progress-bar__outer {
+    border-radius: 6px;
+    background-color: #00000020;
+    .el-progress-bar__inner {
+      background-color: #efefef;
+      border-radius: 6px;
+      text-align: center;
+      font-family: 'UnidreamLED';
+      span {
+        color: #564d59;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+// 卡片样式
+.el-card {
+  border-radius: 8px !important;
+  border: 1px solid transparent !important;
+  background-color: transparent !important;
+  .el-card__header {
+    font-weight: bold;
+    padding: 16px 20px !important;
+    background-color: #ffffff30 !important;
+    border-bottom: 1px solid transparent !important;
+  }
+  .el-card__body {
+    padding: 0 !important;
+    background-color: #ffffff10 !important;
+  }
+}
+
+// transition动画
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease-in-out;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+// keyframes动画
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-blur-in {
+  from {
+    transform: scale(1.6);
+    filter: blur(20px) brightness(0.3);
+  }
+  to {
+    transform: scale(1);
+    filter: blur(0) brightness(1);
+  }
+}
+
+@keyframes fade-blur-main-in {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+// 滚动条样式
+::-webkit-scrollbar,
+scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb,
+scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #eeeeee;
+}
