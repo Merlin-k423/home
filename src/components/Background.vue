@@ -19,6 +19,13 @@ import { ElMessage } from 'element-plus'
 import { h, onUnmounted, onMounted, ref, watch } from 'vue'
 import { useMainStore } from '../stores/mainStore'
 
+const bgImages = [
+  new URL('../assets/images/bg01.jpg', import.meta.url).href,
+  new URL('../assets/images/bg02.jpg', import.meta.url).href,
+  new URL('../assets/images/bg03.jpg', import.meta.url).href,
+  new URL('../assets/images/bg04.jpg', import.meta.url).href
+]
+
 const bgUrl = ref('')
 const bgRandom = ref(0)
 const mainStore = useMainStore()
@@ -26,12 +33,12 @@ const imgTimeout = ref(null)
 const emit = defineEmits(['bgLoaded'])
 
 // 随机图片
-bgRandom.value = Math.floor(Math.random() * 4) + 1 // 生成1到5之间的随机数
+bgRandom.value = Math.floor(Math.random() * bgImages.length)
 
 // 切换壁纸类型
 const changeBg = (type) => {
   if (type === '0') {
-    bgUrl.value = `/src/assets/images/bg0${bgRandom.value}.jpg`
+    bgUrl.value = bgImages[bgRandom.value]
   } else if (type === '1') {
     bgUrl.value = 'https://api.dujin.org/bing/1920.php'
   } else if (type === '2') {
@@ -59,7 +66,7 @@ const imgLoadError = () => {
       fill: '#efefef'
     })
   })
-  bgUrl.value = `/images/background${bgRandom}.jpg`
+  bgUrl.value = bgImages[bgRandom.value]
 }
 
 // 图片动画结束后显示壁纸
