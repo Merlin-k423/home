@@ -51,16 +51,10 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import {
   Blog,
-  Cloud,
-  CompactDisc,
-  Compass,
-  Book,
-  Fire,
-  LaptopCode,
-  Train,
   Search,
-  Box,
+  Train,
   Code,
+  Box,
   Link
 } from '@vicons/fa'
 import { computed } from 'vue'
@@ -69,16 +63,10 @@ const siteLinks = SITE_LINKS.siteLinks
 
 const iconMap = {
   Blog,
-  Cloud,
-  CompactDisc,
-  Compass,
-  Book,
-  Fire,
-  LaptopCode,
-  Train,
   Search,
-  Box,
-  Code
+  Train,
+  Code,
+  Box
 }
 
 // 每页显示的链接数量

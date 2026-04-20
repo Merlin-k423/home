@@ -34,66 +34,56 @@ export const SITE_CONFIG = Object.freeze({
 
 export const SITE_LINKS = Object.freeze({
   siteLinks: Object.freeze([
-    {
-      icon: 'Blog',
-      name: '博客',
-      url: 'https://blog.imsyy.top/'
-    },
-    {
-      icon: 'Cloud',
-      name: '网盘',
-      url: 'https://pan.imsyy.top/'
-    },
-    {
-      icon: 'CompactDisc',
-      name: '音乐',
-      url: 'https://music.imsyy.top/'
-    },
-    {
-      icon: 'Compass',
-      name: '起始页',
-      url: 'https://nav.imsyy.top/'
-    },
-    {
-      icon: 'Book',
-      name: '网址集',
-      url: 'https://web.imsyy.top/'
-    },
-    {
-      icon: 'Fire',
-      name: '今日热榜',
-      url: 'https://hot.imsyy.top/'
-    },
-    {
-      icon: 'LaptopCode',
-      name: '站点监测',
-      url: 'https://status.imsyy.top/'
-    }
+  {
+    "icon": "Blog",
+    "name": "博客",
+    "link": "https://blog.imsyy.top/"
+  },
+  {
+    "icon": "Search",
+    "name": "搜索",
+    "url": "https://kaifa.baidu.com/"
+  },
+  {
+    "icon": "Train",
+    "name": "开往",
+    "link": "https://www.foreverblog.cn/go.html"
+  },
+  {
+    "icon": "Code",
+    "name": "分享",
+    "link": "https://blog.imsyy.top/"
+  },
+  {
+    "icon": "Box",
+    "name": "扩建中",
+    "link": "#"
+  }
   ]),
   socialLinks: Object.freeze([
     {
       name: 'Github',
       icon: '/github.png',
       tip: '去 Github 看看',
-      url: 'https://github.com/imsyy'
+      url: 'https://github.com/Merlin-k423'
     },
     {
       name: 'BiliBili',
       icon: '/bilibili.png',
       tip: '(゜-゜)つロ 干杯 ~',
-      url: 'https://space.bilibili.com/98544142'
+      url: 'https://space.bilibili.com/413028526'
     },
     {
       name: 'QQ',
       icon: '/qq.png',
       tip: '有什么事吗',
-      url: 'https://res.abeim.cn/api/qq/?qq=1539250352'
+      url: 'https://res.abeim.cn/api/qq/?qq=1689477059'
     },
     {
       name: 'Email',
       icon: '/email.png',
       tip: '来封 Email ~',
-      url: 'mailto:one@imsyy.top'
+      url: 'mailto:1689477059@qq.com'
     }
   ])
 })
