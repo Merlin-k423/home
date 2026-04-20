@@ -22,6 +22,7 @@ import Footer from './components/Footer.vue'
 import MainView from './views/MainView.vue'
 import { onMounted } from 'vue'
 import { consoleText } from './utils/consoleText'
+import cursorInit from './utils/cursor'
 
 const mainStore = useMainStore()
 
@@ -43,6 +44,7 @@ const consolePrint = () => {
 }
 
 onMounted(() => {
+  cursorInit()
   consolePrint()
 })
 </script>
