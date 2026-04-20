@@ -3,8 +3,8 @@
     <el-row :gutter="20">
       <el-col :span="12">
         <div class="hitokoto card">
-          <Transition name="el-fade-in-linear" mode="out-in">
-            <div class="contents" @click="updateByClick">
+          <Transition name="fade" mode="out-in">
+            <div class="contents" @click="updateByClick" :key="hitokotoData.hitokoto">
               <span class="text">{{ hitokotoData.hitokoto }}</span>
               <span class="from">-「&nbsp;{{ hitokotoData.from }}&nbsp;」</span>
             </div>
