@@ -46,7 +46,7 @@ import { useMainStore } from '../stores/mainStore'
 import { reactive, watch } from 'vue'
 
 const mainStore = useMainStore()
-const siteLogo = SITE_CONFIG.logo.main
+const siteLogo = new URL('../assets/images/logo.png', import.meta.url).href
 const siteName = SITE_CONFIG.site.name
 const socialLinks = SITE_LINKS.socialLinks
 const socialTip = ref('通过这里联系我吧')

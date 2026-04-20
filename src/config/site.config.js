@@ -16,12 +16,6 @@ export const SITE_CONFIG = Object.freeze({
     startDate: '2025-4-1'
   }),
 
-  // Logo / 图标
-  logo: Object.freeze({
-    favicon: resolveAsset('../assets/images/logo.png'),
-    main: resolveAsset('../assets/images/logo.png')
-  }),
-
   // 标语
   desc: Object.freeze({
     english:
